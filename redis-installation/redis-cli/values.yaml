@@ -1,0 +1,21 @@
+# Default values for redis-cli.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: redis
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "redis-cli"
+
+podAnnotations: {}
+podLabels: {}
+
+autoscaling:
+  enabled: false

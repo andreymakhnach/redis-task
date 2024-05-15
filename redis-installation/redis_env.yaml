@@ -1,0 +1,6 @@
+replica:
+  ## @param replica.replicaCount Number of Redis&reg; replicas to deploy
+  replicaCount: 1
+
+auth:
+  password: "fe5ruhU5TGu5t"
