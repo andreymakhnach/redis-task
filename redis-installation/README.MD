@@ -14,7 +14,11 @@ commands".
 
 # как установить
 протестировано под Ubuntu 22.04, необходимы права sudo
-- апустить скрипт sh ./minikube-install.sh
+- войти на сервер c Ubuntu
+- скачать архив на сервер wget "https://github.com/andreymakhnach/redis-task/blob/main/redis-installation.zip"
+- паспаковать архив 
+- распаковать архив, скопировать папку на сервер 
+- запустить скрипт sh ./minikube-install.sh
 - задать пароль redis в файле ./redis_env.yaml, можно сетнуть и другие параметры
 - запустить скрипт sh redis-install.sh
 
