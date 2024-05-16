@@ -7,23 +7,23 @@
 - minikube-install.sh - скрипт для разворачивания minikube с некоторыми зависимостями, необходимыми для работы minikube (docker), а также утилиты для дальнейшей работы (helm, kubectl, опционально)
 - redis-install.sh - скрипт, который разворачивает сервер redis в k8s кластере, можно сетнуть некоторые переменные (количество реплик и пароль от redis) в файле redis_env.yaml. также скрипт разворачивает из кастомного helm чарта redis-cli (папка ./redis-cli) для работы с сервером redis
 - redis-cli.sh - скрипт для работы с сервером redis, запустив скрипт можно вводить команды для сервера redis.
-- redis-setvalue.sh - скрипт для добавления ключей в redis, запускать в формате "sh ./redis-setvalue.sh keyName keyValue"
-- redis-getvalue.sh - скрипт для получения значения определенного ключей из redis, запускать в формате "sh ./redis-setvalue.sh keyName"
+- redis-setvalue.sh - скрипт для добавления ключей в redis, запускать в формате ``sh ./redis-setvalue.sh keyName keyValue``
+- redis-getvalue.sh - скрипт для получения значения определенного ключей из redis, запускать в формате ``sh ./redis-setvalue.sh keyName``
 
 # как установить
 протестировано под Ubuntu 22.04, необходимы права sudo
 - скачать и распаковать архив redis-installation.zip, скопировать папку redis-installation на сервер, перейти в папку 
 - запустить скрипт ``sh ./minikube-install.sh``
 - задать пароль redis в файле ./redis_env.yaml, можно сетнуть и другие параметры
-- запустить скрипт "sh ./redis-install.sh"
+- запустить скрипт ``sh ./redis-install.sh``
 
 # как работать с redis-cli
 для выполения команд на сервере redis необходимо:
-- запустить скрипт "sh ./redis-cli.sh"
+- запустить скрипт ``sh ./redis-cli.sh``
 - можно выполнять команды redis
 
 чтобы сетнуть ключ в redis
-- запустить скрипт в формате "sh ./redis-setvalue.sh myKey myValue"
+- запустить скрипт в формате ``sh ./redis-setvalue.sh myKey myValue``
 
 чтобы получить значение ключа в redis
 - запустить скрипт в формате "sh ./redis-getvalue.sh myKey"
